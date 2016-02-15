@@ -36,6 +36,14 @@ If you wish to see some further discussion of this topic, go to this [StackOverf
 
 #### Synchronizing with Eclipse
 
+The first step in synchronizing with Eclipse is to change to the Git perspective. Perspectives in Eclipse are UI configurations tailored to a specific task. For example, you've been mostly working in the Java perspective for this class. Unfortunately, there's no way to create a new remote repository in the **Team** menu of the Java perspective. Therefore, we need to switch over to the Git perspective.
+
+To change to the Git perspective go to **Window -> Perspective -> Open Perspective** and select **Git** if you've recently opened this perspective, or if you have not select **Other...**.
+
+If you've selected **Other...** you should see something like the following:
+
+![Perspective -> Other...](https://www.dropbox.com/s/yf1qkm7kjhdp27u/perspective-other.png?dl=1) 
+
 #### Synchronizing with the command line
 
 **Note** These commands should be easy to run on Linux or Mac OS X systems. On Windows systems, it might not be quite as straight forward. On Linux and Mac OS X, git is usually already installed. On windows this might not be the case. In the labs, git is installed with Eclipse, and the command line executables may be packaged with that program. With some luck you might be able to find their exact location. If you can't, just follow the directions in 'Synchronizing with Eclipse' in the section above.
