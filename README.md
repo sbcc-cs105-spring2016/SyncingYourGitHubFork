@@ -44,6 +44,12 @@ If you've selected **Other...** you should see something like the following:
 
 ![Perspective -> Other...](https://www.dropbox.com/s/yf1qkm7kjhdp27u/perspective-other.png?dl=1) 
 
+Select **Git** and then press **OK**.
+
+You have now changed to the Git perspective. Don't worry, it's only one click in the upper right corner to go back to the Java perspective. The following image shows what the Git perspective looks like, and highlights the Java button you can press to go back to the Java perspective.
+
+![Git Perspective](https://www.dropbox.com/s/w8jc8944yo3rd52/git-perspective.png?dl=1)
+
 #### Synchronizing with the command line
 
 **Note** These commands should be easy to run on Linux or Mac OS X systems. On Windows systems, it might not be quite as straight forward. On Linux and Mac OS X, git is usually already installed. On windows this might not be the case. In the labs, git is installed with Eclipse, and the command line executables may be packaged with that program. With some luck you might be able to find their exact location. If you can't, just follow the directions in 'Synchronizing with Eclipse' in the section above.
