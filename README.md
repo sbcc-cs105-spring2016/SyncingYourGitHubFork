@@ -50,6 +50,63 @@ You have now changed to the Git perspective. Don't worry, it's only one click in
 
 ![Git Perspective](https://www.dropbox.com/s/w8jc8944yo3rd52/git-perspective.png?dl=1)
 
+Once you have switched to the Git perspective you can now create the upstream remote. To create this remote, click the triangle in the **Git Repositories** tab of the Git perspective and click the triangle next to the project you are synchronizing. You should see something like the following:
+
+![Project details](https://www.dropbox.com/s/9r2f99lc9goz06w/git-repository-detail.png?dl=1)
+
+Next, follow these directions:
+
+1. Right click **Remotes** under the project you are synchronizing.
+2. Click **Create Remote...***
+
+You should see this dialog:
+
+![Create Remote Dialog](https://www.dropbox.com/s/xszx7vr8grto8ui/git-create-remote.png?dl=1)
+
+Fill in the following on this dialog:
+
+1. In **Remote Name** put 'upstream'. Actually, you can use any name, just be sure to use it through out the rest of these instructions.
+
+2. Select **Configure Fetch**. We want to get the remote repository, not send to it, therefore we select **Configure Fetch**.
+
+3. Click **OK**
+
+Next, you need to configure the new remote repository. You will then see this dialog:
+
+![Configure remote](https://www.dropbox.com/s/673tfc0kwnj28s1/git-configure-fetch.png?dl=1)
+
+Now do the following:
+
+1. Click **Change...**
+
+You should then see the following familiar dialog. Here you enter the URL of the original repository from which you forked. To do that follow these directions:
+
+![Source Git Repository](https://www.dropbox.com/s/q2hvcexxrun08hp/git-source-repository.png?dl=1)
+
+1. Paste the project URL into **URI**.
+2. Fill in your username and password.
+3. Click **Finish**
+
+Once you've clicked **Finish** it should take you to the following dialog. Just click **Save and Fetch**, click **OK** for any subsequent dialogs, and you're done with creating the remote and fetching it. All that's left is rebasing and committing.
+
+Next we need to rebase your repository. Before we do that we need to switch back to the Java perspective. To do this, either select **Java** in the upper right corner, as in the first picture of this sections, or select **Window -> Perspective -> Open Perspective -> Other...** and select **Java**. 
+
+You should now be back in the familiar Java perspective that you've been using all along.
+
+Once there, right-click on the project you're synchronizing and select **Team -> Rebase...*. This action should bring up the following dialog:
+
+![Rebase dialog](https://www.dropbox.com/s/gnpn37t5uz59mo2/git-rebase.png?dl=1)
+
+When you see this dialog, do the following:
+
+1. Select the 'upstream' remote you created in the first step (Or whatever you named it).
+2. Click **Rebase** and click **OK** on the subsequent dialog.
+
+
+You're almost done. The final step is to commit and push the merged code into your repository. You can follow the usual process by right-clicking your project and the selecting **Team -> Commit...**. You must have a changed file in your repository in order to do the commit and push. Either make a minor change to your source code file, or wait until you do a future commit before submitting your code for test.
+
+That's it you are done. To verify that you're done, go to your GitHub repository and make sure the changes are seen there.
+
 #### Synchronizing with the command line
 
 **Note** These commands should be easy to run on Linux or Mac OS X systems. On Windows systems, it might not be quite as straight forward. On Linux and Mac OS X, git is usually already installed. On windows this might not be the case. In the labs, git is installed with Eclipse, and the command line executables may be packaged with that program. With some luck you might be able to find their exact location. If you can't, just follow the directions in 'Synchronizing with Eclipse' in the section above.
@@ -81,7 +138,5 @@ git rebase upstream/master
 
 git push -f origin master
 ```
-
-### After you synchronize
 
 
