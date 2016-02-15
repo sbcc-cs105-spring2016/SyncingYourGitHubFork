@@ -40,19 +40,20 @@ If you wish to see some further discussion of this topic, go to this [StackOverf
 
 **Note** These commands should be easy to run on Linux or Mac OS X systems. On Windows systems, it might not be quite as straight forward. On Linux and Mac OS X, git is usually already installed. On windows this might not be the case. In the labs, git is installed with Eclipse, and the command line executables may be packaged with that program. With some luck you might be able to find their exact location. If you can't, just follow the directions in 'Synchronizing with Eclipse' in the section above.
 
-Synchronizing on the command line is pretty straight forward and rote. Just issue these commands in the order give. The only piece of information you need to supply the URL to the _original_ repository, **not** your repository. For example, the URL you would need to rebase the EX03-AlignedNumbers project is http://sbcc-cs105-s2016/EX03-AlignedNumbers. Once you gotten that URL, execute these commands:
+Synchronizing on the command line is pretty straight forward and rote. Just issue these commands in the order give. The only piece of information you need to supply the URL to the _original_ repository, **not** your repository. For example, the URL you would need to rebase the EX03-AlignedNumbers project is https://github.com/sbcc-cs105-spring2016/EX03-AlignedNumbers. Once you gotten that URL, execute these commands:
 
 ```sh
 # Add the remote, call it "upstream":
 
-git remote add upstream https://github.com/whoever/whatever.git
+git remote add upstream https://github.com/sbcc-cs105-spring2016/<Assignment Name>.git
 
 # Fetch all the branches of that remote into remote-tracking branches,
 # such as upstream/master:
 
 git fetch upstream
 
-# Make sure that you're on your master branch:
+# Make sure that you're on your master branch: This step is optional, and not
+# necessary in most situations. It will not hurt anything to run it.
 
 git checkout master
 
@@ -61,6 +62,10 @@ git checkout master
 # other branch:
 
 git rebase upstream/master
+
+# If you want to make this rebase immediately available, force commit the changes
+
+git push -f origin master
 ```
 
 ### After you synchronize
